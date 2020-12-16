@@ -1,0 +1,24 @@
+{
+  "name": "myNuxt",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env BASE_URL=http://localhost:4000 nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.12.2",
+    "chalk": "^4.1.0",
+    "core-js": "^3.6.5",
+    "cssnano": "^4.1.10",
+    "nuxt": "^2.14.6"
+  },
+  "devDependencies": {
+    "@nuxtjs/proxy": "^2.1.0",
+    "@nuxtjs/vuetify": "^1.11.2",
+    "cross-env": "^7.0.2",
+    "mockjs": "^1.1.0"
+  }
+}
