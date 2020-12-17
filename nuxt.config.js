@@ -42,29 +42,29 @@ export default {
   modules: ['@nuxtjs/axios'
   ],
   axios: {
-    baseURL: 'http://10.31.52.37:8080',
+    // baseURL: 'http://10.31.52.37:8080',
     proxy: true,
     // prefix: '/issuance',
     credentials: true // Indicates whether credentials are required for cross-domain requests
   },
-  // proxy: {
-  //   '/liveness': {
-  //     target: 'http://10.31.52.37:8080', // Target interface domain name 
-  //     changeOrigin: true, // Indicates whether it crosses domains
-  //     // pathRewrite: {
-  //     //   '^/issuance': '',
-  //     // }
-  //   },
-  //   '/justTest': {
-  //     target: 'http://10.31.52.37:8080', // Target interface domain name 
-  //     changeOrigin: true, // Indicates whether it crosses domains
-  //   },
-  //   '/ethBlockNumber': {
-  //     target: 'http://10.31.52.37:8080', // Target interface domain name 
-  //     changeOrigin: true, // Indicates whether it crosses domains
-  //   },
+  proxy: {
+    '/liveness': {
+      target: 'http://testsb.business:8080', // Target interface domain name 
+      changeOrigin: true, // Indicates whether it crosses domains
+      // pathRewrite: {
+      //   '^/issuance': '',
+      // }
+    },
+    '/justTest': {
+      target: 'http://testsb.business:8080', // Target interface domain name 
+      changeOrigin: true, // Indicates whether it crosses domains
+    },
+    '/ethBlockNumber': {
+      target: 'http://testsb.business:8080', // Target interface domain name 
+      changeOrigin: true, // Indicates whether it crosses domains
+    },
   
-  // },
+  },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {

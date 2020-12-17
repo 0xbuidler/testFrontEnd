@@ -4,6 +4,7 @@ metadata:
   name: {{ include "testfe.fullname" . }}
   labels:
     {{- include "testfe.labels" . | nindent 4 }}
+  namespace: {{ .Values.namespace.business }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
@@ -34,13 +35,9 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: 80
+              containerPort: 8000
               protocol: TCP
           livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
             httpGet:
               path: /
               port: http
