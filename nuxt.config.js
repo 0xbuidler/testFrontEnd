@@ -27,7 +27,7 @@ export default {
   },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: ['~/plugins/vue-inject.js','~/plugins/ctx-inject.js','~/plugins/combined-inject.js','~/plugins/axios','~/plugins/api',{src:"~/plugins/mock",ssr:true}],
+  plugins: ['~/plugins/vue-inject.js','~/plugins/ctx-inject.js','~/plugins/combined-inject.js','~/plugins/axios'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -42,29 +42,29 @@ export default {
   modules: ['@nuxtjs/axios'
   ],
   axios: {
-    // baseURL: 'http://10.31.52.44:8082',
+    baseURL: 'http://10.31.52.37:8080',
     proxy: true,
     // prefix: '/issuance',
     credentials: true // Indicates whether credentials are required for cross-domain requests
   },
-  proxy: {
-    '/liveness': {
-      target: 'http://10.31.52.37:8080', // Target interface domain name 
-      changeOrigin: true, // Indicates whether it crosses domains
-      // pathRewrite: {
-      //   '^/issuance': '',
-      // }
-    },
-    '/justTest': {
-      target: 'http://10.31.52.37:8080', // Target interface domain name 
-      changeOrigin: true, // Indicates whether it crosses domains
-    },
-    '/ethBlockNumber': {
-      target: 'http://10.31.52.37:8080', // Target interface domain name 
-      changeOrigin: true, // Indicates whether it crosses domains
-    },
+  // proxy: {
+  //   '/liveness': {
+  //     target: 'http://10.31.52.37:8080', // Target interface domain name 
+  //     changeOrigin: true, // Indicates whether it crosses domains
+  //     // pathRewrite: {
+  //     //   '^/issuance': '',
+  //     // }
+  //   },
+  //   '/justTest': {
+  //     target: 'http://10.31.52.37:8080', // Target interface domain name 
+  //     changeOrigin: true, // Indicates whether it crosses domains
+  //   },
+  //   '/ethBlockNumber': {
+  //     target: 'http://10.31.52.37:8080', // Target interface domain name 
+  //     changeOrigin: true, // Indicates whether it crosses domains
+  //   },
   
-  },
+  // },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
