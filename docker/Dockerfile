@@ -5,7 +5,7 @@ RUN apk --no-cache add --virtual native-deps \
     g++ gcc libgcc libstdc++ linux-headers make python && \
     npm install --quiet node-gyp -g &&\
     npm install --quiet && \
-    cp -r -f /usr/share/zoneinfo/Hongkong /etc/localtime &&\
+    ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &&\
     apk del native-deps
 RUN npm install && npm run build 
 EXPOSE 8000
