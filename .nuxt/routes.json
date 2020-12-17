@@ -1,0 +1,30 @@
+[
+  {
+    "name": "inspire",
+    "path": "/inspire",
+    "component": "/Users/jerry/Desktop/HKMA/DevOps/testEnv/testFrontEnd/pages/inspire.vue",
+    "chunkName": "pages/inspire",
+    "_name": "_be6699a4"
+  },
+  {
+    "name": "myDemo",
+    "path": "/myDemo",
+    "component": "/Users/jerry/Desktop/HKMA/DevOps/testEnv/testFrontEnd/pages/myDemo.vue",
+    "chunkName": "pages/myDemo",
+    "_name": "_cd6d8aea"
+  },
+  {
+    "name": "home-home",
+    "path": "/home/home",
+    "component": "/Users/jerry/Desktop/HKMA/DevOps/testEnv/testFrontEnd/pages/home/home.vue",
+    "chunkName": "pages/home/home",
+    "_name": "_db8b3a3a"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/jerry/Desktop/HKMA/DevOps/testEnv/testFrontEnd/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_3a89a7b4"
+  }
+]
